@@ -36,43 +36,65 @@ BPP (publisher)
 npm install
 ```
 
-## 2. Start the stack
+## 2. Configure environment
+
+Copy the example env file and set the required secrets:
 
 ```bash
-GITEA_ADMIN_PASSWORD=changeme docker compose up --build -d
+cp .env.example .env
 ```
 
-Set `GITEA_ADMIN_PASSWORD` in your environment (or a `.env` file) before starting the stack. The admin user is created automatically on first start by the Gitea container.
+Edit `.env` and set at minimum:
 
-## 3. Bootstrap each Gitea node
-
-Run the init script once per node to create the `beckn` org:
-
-```bash
-GITEA_ADMIN_PASSWORD=changeme ./docker/gitea/init.sh http://localhost:3001
-GITEA_ADMIN_PASSWORD=changeme ./docker/gitea/init.sh http://localhost:3002
+```
+GITEA_ADMIN_PASSWORD=your-password-here
+POSTGRES_PASSWORD=your-password-here
 ```
 
-No token management needed. The API uses Basic auth with the same `GITEA_ADMIN_USER` and `GITEA_ADMIN_PASSWORD` configured on all Gitea instances. Set these env vars in your `.env` file or pass them when starting the stack:
-
-```bash
-GITEA_ADMIN_PASSWORD=changeme docker compose up --build -d
-```
-
-The API reads these required env vars on startup:
+The full set of variables:
 
 | Variable | Default | Required |
 |---|---|---|
+| `GITEA_ADMIN_PASSWORD` | — | **yes** |
+| `POSTGRES_PASSWORD` | — | **yes** |
 | `GITEA_ADMIN_USER` | `gitea_admin` | no |
-| `GITEA_ADMIN_PASSWORD` | — | yes |
 | `GITEA_ADMIN_EMAIL` | `admin@beckn.local` | no |
-| `GITEA_NODES` | — | yes (set in compose) |
+| `GITEA_NODES` | set in compose | no |
 | `PORT` | `3000` | no |
 | `GITEA_ORG` | `beckn` | no |
-| `DATABASE_URL` | postgres compose default | no |
-| `REDIS_URL` | redis compose default | no |
 
-## 5. Run the smoke test
+## 3. Start the stack
+
+`start.sh` builds images, starts all containers, creates the Gitea admin user on each node, creates the `beckn` org, and waits for the API to be healthy — all in one step.
+
+```bash
+./start.sh
+```
+
+For a clean slate (wipes all volumes and rebuilds from scratch):
+
+```bash
+./start.sh --fresh
+```
+
+When it finishes you will see:
+
+```
+Stack is ready.
+
+  API:     http://localhost:3000
+  Gitea-1: http://localhost:3001/beckn
+  Gitea-2: http://localhost:3002/beckn
+```
+
+> **What `start.sh` does internally:**
+> 1. Sources `.env` for credentials
+> 2. Starts Postgres, Redis, and both Gitea nodes (`docker compose up --build -d`)
+> 3. Runs `docker/gitea/init.sh` against each node — waits for Gitea readiness, creates the admin user via `docker exec`, creates the `beckn` org
+> 4. Starts the API container (`docker compose up -d api`)
+> 5. Polls `GET /health` until the API is up
+
+## 4. Run the smoke test
 
 ```bash
 node tests/e2e/smokeTest.js
@@ -87,7 +109,7 @@ Env vars are read from the `.env` file. Requires the full Docker Compose stack t
 5. GET an unknown catalog → `404 NACK NOT_FOUND`
 6. POST an invalid payload → `400 NACK INVALID_REQUEST`
 
-## 6. Run unit and integration tests
+## 5. Run unit and integration tests
 
 No Docker required — all external dependencies are mocked with nock / ioredis-mock / jest.mock.
 
@@ -101,7 +123,7 @@ npm test -- --testPathPattern=tests/integration/api              # Phase 5 only
 npm test -- --coverage                                            # with coverage report
 ```
 
-## 7. Browse repos
+## 6. Browse repos
 
 After publishing, inspect repos in the Gitea web UI:
 
@@ -110,7 +132,7 @@ After publishing, inspect repos in the Gitea web UI:
 
 Each catalog ID appears as a repo under the `beckn` org on whichever node owns its shard.
 
-## 8. Adding a 3rd node (zero migration)
+## 7. Adding a 3rd node (zero migration)
 
 1. Add a `gitea-3` service to `docker-compose.yml` (copy any existing `gitea-N` block, port `3003:3000`, volume `gitea-data-3`).
 2. Start it:
