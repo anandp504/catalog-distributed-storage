@@ -1,0 +1,274 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "catalog/publish",
+    "timestamp": "2026-05-05T11:00:00Z",
+    "transactionId": "c3d4e5f6-a7b8-9012-cdef-012345678902",
+    "messageId": "d4e5f6a7-b8c9-0123-defa-123456789012",
+    "bapId": "catalg.beckn.org",
+    "bapUri": "https://catalg.beckn.org/api",
+    "bppId": "bpp.medplus.in",
+    "bppUri": "https://bpp.medplus.in/callback",
+    "networkId": "beckn.one/ion-health"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "id": "CAT-PHARMACY-MEDPLUS-ION-001",
+        "descriptor": {
+          "name": "MedPlus Pharmacy Catalog",
+          "shortDesc": "OTC medicines, vitamins and health essentials"
+        },
+        "provider": {
+          "id": "PROV-MEDPLUS-ION-01",
+          "descriptor": {
+            "name": "MedPlus Health Services Ltd"
+          },
+          "availableAt": [
+            {
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.6408, 12.9141]
+              },
+              "address": {
+                "streetAddress": "Outer Ring Road, Near Marathahalli Bridge",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560037",
+                "addressCountry": "IN"
+              }
+            }
+          ]
+        },
+        "resources": [
+          {
+            "id": "RES-PHARMA-CROCIN-500MG-15TAB",
+            "descriptor": {
+              "name": "Crocin Pain Relief 500mg Tablets (15s)",
+              "shortDesc": "Paracetamol 500mg — fever and mild pain relief",
+              "longDesc": "Crocin Pain Relief tablets contain Paracetamol 500mg, indicated for the relief of mild to moderate pain and fever. Suitable for headache, toothache, backache, minor arthritis pain and cold/flu symptoms. Fast-acting formula. Each strip contains 15 tablets.",
+              "mediaFile": [
+                {
+                  "uri": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/36e9c15f-8d21-4fa6-ae0b-72e69a3e70e3.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/PharmacyResource/v2.1/context.jsonld",
+              "@type": "PharmacyResource",
+              "identity": {
+                "brand": "Crocin",
+                "manufacturer": "Haleon India Pvt Ltd",
+                "originCountry": "IN"
+              },
+              "composition": [
+                { "ingredient": "Paracetamol", "strength": "500mg", "role": "ACTIVE" }
+              ],
+              "physical": {
+                "packageType": "Strip",
+                "unitsPerPackage": 15
+              },
+              "regulatory": {
+                "scheduleType": "OTC",
+                "fssaiLicenseNo": null,
+                "drugLicenseNo": "MH-MUM-G-04-00054321"
+              },
+              "storage": { "condition": "Store below 25°C, away from light and moisture" },
+              "warnings": ["Keep out of reach of children", "Do not exceed stated dose"]
+            }
+          },
+          {
+            "id": "RES-PHARMA-VITAMIND3-60K-4CAPS",
+            "descriptor": {
+              "name": "HealthVit Vitamin D3 60000 IU Capsules (4s)",
+              "shortDesc": "Cholecalciferol 60000 IU — weekly supplementation",
+              "longDesc": "HealthVit Vitamin D3 60000 IU capsules contain Cholecalciferol in a weekly dosage format, recommended for Vitamin D deficiency correction. Each softgel capsule contains 1500mcg (60000 IU) of Vitamin D3. Supports bone health, immune function, and calcium absorption.",
+              "mediaFile": [
+                {
+                  "uri": "https://onemg.gumlet.io/l_watermark_346,w_480,h_480/a_ignore,w_480,h_480,c_fit,q_auto,f_auto/healthvit-vitamin-d3-60000iu.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/PharmacyResource/v2.1/context.jsonld",
+              "@type": "PharmacyResource",
+              "identity": {
+                "brand": "HealthVit",
+                "manufacturer": "Vitalcare Formulations Pvt Ltd",
+                "originCountry": "IN"
+              },
+              "composition": [
+                { "ingredient": "Cholecalciferol (Vitamin D3)", "strength": "60000 IU", "role": "ACTIVE" }
+              ],
+              "physical": {
+                "packageType": "Blister",
+                "unitsPerPackage": 4,
+                "form": "Softgel Capsule"
+              },
+              "regulatory": { "scheduleType": "OTC" },
+              "storage": { "condition": "Store below 30°C in a dry place" },
+              "warnings": ["Consult a physician before use if on medication"]
+            }
+          },
+          {
+            "id": "RES-PHARMA-CETAPHIL-FACEWASH-250ML",
+            "descriptor": {
+              "name": "Cetaphil Gentle Skin Cleanser 250ml",
+              "shortDesc": "Soap-free, fragrance-free face and body wash for sensitive skin",
+              "longDesc": "Cetaphil Gentle Skin Cleanser is a mild, non-irritating cleanser formulated for sensitive, dry or normal skin. It removes dirt, makeup and impurities without stripping the skin's natural oils. Dermatologist-recommended, soap-free and fragrance-free. Suitable for face and body. 250ml pump bottle.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.cetaphil.co.in/dw/image/v2/BDBJ_PRD/on/demandware.static/-/Sites-galderma-in-Library/default/dw6b46a44d/HomePage/cetaphil-gentle-skin-cleanser-250ml.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/PharmacyResource/v2.1/context.jsonld",
+              "@type": "PharmacyResource",
+              "identity": {
+                "brand": "Cetaphil",
+                "manufacturer": "Galderma India Pvt Ltd",
+                "originCountry": "IN"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 250, "unitText": "ML" },
+                "packageType": "Pump Bottle"
+              },
+              "regulatory": { "scheduleType": "OTC" },
+              "keyIngredients": ["Niacinamide", "Panthenol", "Glycerin"],
+              "suitableFor": ["Sensitive Skin", "Dry Skin", "Normal Skin"],
+              "storage": { "condition": "Store at room temperature" }
+            }
+          },
+          {
+            "id": "RES-PHARMA-OMRON-THERMOMETER-MC246",
+            "descriptor": {
+              "name": "Omron MC-246 Digital Thermometer",
+              "shortDesc": "Clinical-grade oral/rectal/underarm thermometer, 10s reading",
+              "longDesc": "The Omron MC-246 is a clinically validated digital thermometer that delivers accurate temperature readings in just 10 seconds. Features a flexible probe tip for safe oral, rectal, or underarm use, fever alarm, last reading memory, and auto-off after 10 minutes. Water-resistant probe. Battery included.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.omron-healthcare.co.in/on/demandware.static/-/Sites-omron-healthcare-Library/default/MC-246-product.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/PharmacyResource/v2.1/context.jsonld",
+              "@type": "PharmacyResource",
+              "identity": {
+                "brand": "Omron",
+                "model": "MC-246",
+                "manufacturer": "Omron Healthcare India Pvt Ltd",
+                "originCountry": "JP"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 75, "unitText": "G" }
+              },
+              "specifications": {
+                "measurementRange": "32.0°C – 42.9°C",
+                "accuracy": "±0.1°C",
+                "readingTime": "10 seconds",
+                "modes": ["Oral", "Rectal", "Underarm"]
+              },
+              "regulatory": { "scheduleType": "OTC", "cdscoApproved": true },
+              "warranty": { "duration": 24, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          },
+          {
+            "id": "RES-PHARMA-3M-N95-MASK-9502-10PACK",
+            "descriptor": {
+              "name": "3M Aura N95 Particulate Respirator 9502+ (Pack of 10)",
+              "shortDesc": "NIOSH-approved N95, 3-panel design, no valve",
+              "longDesc": "The 3M Aura 9502+ is a NIOSH-approved N95 respirator with an innovative 3-panel flat-fold design for comfortable fit. Filters at least 95% of airborne particles ≥0.3 microns. Suitable for construction, healthcare visits, and air quality protection. Adjustable nose clip and dual braided headbands. Pack of 10.",
+              "mediaFile": [
+                {
+                  "uri": "https://multimedia.3m.com/mws/media/1794728O/3m-aura-particulate-respirator-9502-plus.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/PharmacyResource/v2.1/context.jsonld",
+              "@type": "PharmacyResource",
+              "identity": {
+                "brand": "3M",
+                "model": "Aura 9502+",
+                "manufacturer": "3M India Ltd",
+                "originCountry": "IN"
+              },
+              "physical": {
+                "packageType": "Box",
+                "unitsPerPackage": 10
+              },
+              "specifications": {
+                "filtrationEfficiency": "≥95% (N95)",
+                "certification": "NIOSH, BIS",
+                "valved": false,
+                "design": "3-panel flat-fold"
+              },
+              "regulatory": { "scheduleType": "OTC" }
+            }
+          }
+        ],
+        "offers": [
+          {
+            "id": "OFFER-CROCIN-500-001",
+            "descriptor": { "name": "Crocin 500mg 15 Tablets — MRP" },
+            "resourceIds": ["RES-PHARMA-CROCIN-500MG-15TAB"],
+            "provider": { "id": "PROV-MEDPLUS-ION-01", "descriptor": { "name": "MedPlus Marathahalli" } },
+            "validity": { "startDate": "2026-05-01T00:00:00Z", "endDate": "2026-07-31T23:59:59Z" },
+            "considerations": [
+              {
+                "id": "CONSID-CROCIN-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Crocin 500mg 15 Tab (MRP)", "amount": 24, "type": "BASE_PRICE" }],
+                  "totalAmount": 24
+                }
+              }
+            ]
+          },
+          {
+            "id": "OFFER-VITAMIND3-001",
+            "descriptor": { "name": "HealthVit Vitamin D3 60000IU 4 Caps — MRP" },
+            "resourceIds": ["RES-PHARMA-VITAMIND3-60K-4CAPS"],
+            "provider": { "id": "PROV-MEDPLUS-ION-01", "descriptor": { "name": "MedPlus Marathahalli" } },
+            "validity": { "startDate": "2026-05-01T00:00:00Z", "endDate": "2026-07-31T23:59:59Z" },
+            "considerations": [
+              {
+                "id": "CONSID-VITAMIND3-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "HealthVit D3 60000IU 4 Caps (MRP)", "amount": 68, "type": "BASE_PRICE" }],
+                  "totalAmount": 68
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "publishDirectives": [
+      {
+        "catalogId": "CAT-PHARMACY-MEDPLUS-ION-001",
+        "catalogType": "regular",
+        "updateMode": "MERGE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Environment — keep .env.example, never commit .env
+.env
+
+# Test coverage
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Docker volumes written to local disk (if any)
+gitea-data/
+postgres-data/
+
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Claude Code local session state (agents and skills are committed; local settings are not)
+.claude/settings.local.json
+

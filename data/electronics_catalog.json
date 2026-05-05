@@ -1,0 +1,294 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "catalog/publish",
+    "timestamp": "2026-05-05T10:30:00Z",
+    "transactionId": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "messageId": "b2c3d4e5-f6a7-8901-bcde-f12345678901",
+    "bapId": "catalg.beckn.org",
+    "bapUri": "https://catalg.beckn.org/api",
+    "bppId": "bpp.techzone.in",
+    "bppUri": "https://bpp.techzone.in/callback",
+    "networkId": "beckn.one/ion-retail"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "id": "CAT-ELECTRONICS-TECHZONE-ION-001",
+        "descriptor": {
+          "name": "TechZone Electronics Catalog",
+          "shortDesc": "Smartphones, laptops, audio and cameras"
+        },
+        "provider": {
+          "id": "PROV-TECHZONE-ION-01",
+          "descriptor": {
+            "name": "TechZone Pvt Ltd"
+          },
+          "availableAt": [
+            {
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.5946, 12.9716]
+              },
+              "address": {
+                "streetAddress": "14, MG Road, Shivaji Nagar",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560001",
+                "addressCountry": "IN"
+              }
+            }
+          ]
+        },
+        "resources": [
+          {
+            "id": "RES-ELEC-SAMSUNG-S24-128GB",
+            "descriptor": {
+              "name": "Samsung Galaxy S24 128GB",
+              "shortDesc": "6.2\" AMOLED, Snapdragon 8 Gen 3, 50MP camera",
+              "longDesc": "The Samsung Galaxy S24 features a 6.2-inch Dynamic AMOLED 2X display with 120Hz refresh rate, powered by the Snapdragon 8 Gen 3 chipset. Equipped with a 50MP main camera, 10MP telephoto and 12MP ultrawide, plus a 4000mAh battery with 25W fast charging. Runs One UI 6.1 on Android 14.",
+              "mediaFile": [
+                {
+                  "uri": "https://images.samsung.com/in/smartphones/galaxy-s24/buy/galaxy-s24-onyx-black.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/ElectronicsResource/v2.1/context.jsonld",
+              "@type": "ElectronicsResource",
+              "identity": {
+                "brand": "Samsung",
+                "model": "Galaxy S24",
+                "originCountry": "KR"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 167, "unitText": "G" },
+                "dimensions": { "length": 147, "width": 70.6, "height": 7.6, "unit": "MM" }
+              },
+              "specifications": {
+                "display": "6.2 inch Dynamic AMOLED 2X 120Hz",
+                "processor": "Snapdragon 8 Gen 3",
+                "ram": "8GB",
+                "storage": "128GB",
+                "battery": "4000mAh",
+                "os": "Android 14"
+              },
+              "warranty": { "duration": 12, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          },
+          {
+            "id": "RES-ELEC-APPLE-MACBOOK-AIR-M3-8GB-256GB",
+            "descriptor": {
+              "name": "Apple MacBook Air 13\" M3 8GB 256GB",
+              "shortDesc": "Apple M3 chip, 13.6\" Liquid Retina, 18hr battery",
+              "longDesc": "The MacBook Air M3 is Apple's most popular laptop, redesigned with the M3 chip for up to 60% faster performance than M1. Features a 13.6-inch Liquid Retina display, MagSafe charging, two Thunderbolt ports, and an 18-hour battery. Fanless design keeps it silent under all workloads.",
+              "mediaFile": [
+                {
+                  "uri": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-midnight-select-20220606.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/ElectronicsResource/v2.1/context.jsonld",
+              "@type": "ElectronicsResource",
+              "identity": {
+                "brand": "Apple",
+                "model": "MacBook Air M3",
+                "originCountry": "CN"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 1.24, "unitText": "KG" }
+              },
+              "specifications": {
+                "display": "13.6 inch Liquid Retina 2560x1664",
+                "processor": "Apple M3 8-core CPU",
+                "ram": "8GB Unified Memory",
+                "storage": "256GB SSD",
+                "battery": "52.6Wh 18hr",
+                "os": "macOS Sequoia"
+              },
+              "warranty": { "duration": 12, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          },
+          {
+            "id": "RES-ELEC-SONY-WH1000XM5",
+            "descriptor": {
+              "name": "Sony WH-1000XM5 Wireless Headphones",
+              "shortDesc": "Industry-leading noise cancellation, 30hr battery",
+              "longDesc": "The WH-1000XM5 sets the industry standard for noise cancellation with eight microphones and two processors. Features 30-hour battery life, multipoint connection for two devices, speak-to-chat technology, and a redesigned lightweight frame. Crystal-clear hands-free calling and Alexa/Google Assistant built in.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.sony.co.in/image/5d02da5df552836db894cead8a68f764",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/ElectronicsResource/v2.1/context.jsonld",
+              "@type": "ElectronicsResource",
+              "identity": {
+                "brand": "Sony",
+                "model": "WH-1000XM5",
+                "originCountry": "JP"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 250, "unitText": "G" }
+              },
+              "specifications": {
+                "type": "Over-ear wireless",
+                "connectivity": "Bluetooth 5.2",
+                "battery": "30 hours with ANC on",
+                "noiseCancellation": "Active Noise Cancellation",
+                "driverSize": "30mm"
+              },
+              "warranty": { "duration": 12, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          },
+          {
+            "id": "RES-ELEC-LG-55-OLED-C3",
+            "descriptor": {
+              "name": "LG 55\" OLED evo C3 4K Smart TV",
+              "shortDesc": "Self-lit OLED pixels, 120Hz, webOS 23, G-Sync",
+              "longDesc": "The LG C3 OLED delivers perfect blacks and infinite contrast with self-lit OLED evo pixels. Powered by the α9 Gen6 AI Processor 4K, it supports Dolby Vision IQ, Dolby Atmos, and 4K 120Hz gaming with NVIDIA G-Sync and AMD FreeSync Premium. webOS 23 smart platform with ThinQ AI.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.lg.com/in/images/televisions/md07521665/gallery/DZ-1.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/ElectronicsResource/v2.1/context.jsonld",
+              "@type": "ElectronicsResource",
+              "identity": {
+                "brand": "LG",
+                "model": "OLED55C3PSA",
+                "originCountry": "KR"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 17.4, "unitText": "KG" },
+                "dimensions": { "length": 1228, "width": 708, "height": 49, "unit": "MM" }
+              },
+              "specifications": {
+                "display": "55 inch OLED evo 4K 120Hz",
+                "processor": "α9 Gen6 AI Processor",
+                "hdr": "Dolby Vision IQ, HDR10, HLG",
+                "audio": "Dolby Atmos 40W 2.2ch",
+                "smartPlatform": "webOS 23",
+                "gaming": "G-Sync, FreeSync, 0.1ms response"
+              },
+              "warranty": { "duration": 12, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          },
+          {
+            "id": "RES-ELEC-CANON-EOS-R50",
+            "descriptor": {
+              "name": "Canon EOS R50 Mirrorless Camera (Body)",
+              "shortDesc": "24.2MP APS-C, 4K video, dual pixel CMOS AF II",
+              "longDesc": "The Canon EOS R50 is a compact mirrorless camera with a 24.2MP APS-C CMOS sensor and DIGIC X processor. Features Dual Pixel CMOS AF II with subject tracking for people, animals and vehicles, 4K 30p video with crop or uncropped output, and up to 15fps electronic shutter. Lightweight at just 375g.",
+              "mediaFile": [
+                {
+                  "uri": "https://in.canon/media/image/2023/02/13/d1b4c7c0e1c8403c8e2e9c2f0a7b3d1e_EOS+R50+Black+Front+slant.png",
+                  "mimeType": "image/png",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/ElectronicsResource/v2.1/context.jsonld",
+              "@type": "ElectronicsResource",
+              "identity": {
+                "brand": "Canon",
+                "model": "EOS R50",
+                "originCountry": "JP"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 375, "unitText": "G" }
+              },
+              "specifications": {
+                "sensor": "24.2MP APS-C CMOS",
+                "processor": "DIGIC X",
+                "autofocus": "Dual Pixel CMOS AF II",
+                "video": "4K 30p, Full HD 120p",
+                "burst": "15fps electronic, 12fps mechanical",
+                "mount": "Canon RF"
+              },
+              "warranty": { "duration": 12, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          }
+        ],
+        "offers": [
+          {
+            "id": "OFFER-SAMSUNG-S24-001",
+            "descriptor": { "name": "Samsung Galaxy S24 128GB — MRP" },
+            "resourceIds": ["RES-ELEC-SAMSUNG-S24-128GB"],
+            "provider": {
+              "id": "PROV-TECHZONE-ION-01",
+              "descriptor": { "name": "TechZone MG Road" }
+            },
+            "validity": {
+              "startDate": "2026-05-01T00:00:00Z",
+              "endDate": "2026-07-31T23:59:59Z"
+            },
+            "considerations": [
+              {
+                "id": "CONSID-SAMSUNG-S24-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [
+                    { "title": "Samsung Galaxy S24 128GB (MRP)", "amount": 74999, "type": "BASE_PRICE" }
+                  ],
+                  "totalAmount": 74999
+                }
+              }
+            ]
+          },
+          {
+            "id": "OFFER-MACBOOK-AIR-M3-001",
+            "descriptor": { "name": "MacBook Air M3 8GB 256GB — MRP" },
+            "resourceIds": ["RES-ELEC-APPLE-MACBOOK-AIR-M3-8GB-256GB"],
+            "provider": {
+              "id": "PROV-TECHZONE-ION-01",
+              "descriptor": { "name": "TechZone MG Road" }
+            },
+            "validity": {
+              "startDate": "2026-05-01T00:00:00Z",
+              "endDate": "2026-07-31T23:59:59Z"
+            },
+            "considerations": [
+              {
+                "id": "CONSID-MACBOOK-M3-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [
+                    { "title": "Apple MacBook Air M3 (MRP)", "amount": 114900, "type": "BASE_PRICE" }
+                  ],
+                  "totalAmount": 114900
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "publishDirectives": [
+      {
+        "catalogId": "CAT-ELECTRONICS-TECHZONE-ION-001",
+        "catalogType": "regular",
+        "updateMode": "MERGE"
+      }
+    ]
+  }
+}

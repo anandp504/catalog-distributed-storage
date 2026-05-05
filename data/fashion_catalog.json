@@ -1,0 +1,303 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "catalog/publish",
+    "timestamp": "2026-05-05T11:30:00Z",
+    "transactionId": "e5f6a7b8-c9d0-1234-efab-234567890123",
+    "messageId": "f6a7b8c9-d0e1-2345-fabc-345678901234",
+    "bapId": "catalg.beckn.org",
+    "bapUri": "https://catalg.beckn.org/api",
+    "bppId": "bpp.trendmart.in",
+    "bppUri": "https://bpp.trendmart.in/callback",
+    "networkId": "beckn.one/ion-retail"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "id": "CAT-FASHION-TRENDMART-ION-001",
+        "descriptor": {
+          "name": "TrendMart Fashion Catalog",
+          "shortDesc": "Men's and women's apparel, footwear and accessories"
+        },
+        "provider": {
+          "id": "PROV-TRENDMART-ION-01",
+          "descriptor": {
+            "name": "TrendMart Retail Pvt Ltd"
+          },
+          "availableAt": [
+            {
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.6184, 12.9352]
+              },
+              "address": {
+                "streetAddress": "Forum Mall, Hosur Road, Koramangala",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560095",
+                "addressCountry": "IN"
+              }
+            }
+          ]
+        },
+        "resources": [
+          {
+            "id": "RES-FASHION-ARROW-FORMAL-SHIRT-WHITE-M",
+            "descriptor": {
+              "name": "Arrow Formal Shirt — White, Full Sleeve, Medium",
+              "shortDesc": "100% cotton slim-fit spread collar formal shirt",
+              "longDesc": "Arrow men's formal shirt in classic white, crafted from 100% premium cotton poplin fabric. Slim fit silhouette with spread collar, single chest pocket, and mother-of-pearl buttons. Machine washable. Available in sizes S through XXL. Perfect for office, interviews and formal events.",
+              "mediaFile": [
+                {
+                  "uri": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/1234567/2023/3/8/arrow-white-formal-shirt.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FashionResource/v2.1/context.jsonld",
+              "@type": "FashionResource",
+              "identity": {
+                "brand": "Arrow",
+                "manufacturer": "Arvind Fashions Ltd",
+                "originCountry": "IN"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 250, "unitText": "G" }
+              },
+              "attributes": {
+                "fabric": "100% Cotton Poplin",
+                "fit": "Slim Fit",
+                "collar": "Spread Collar",
+                "sleeve": "Full Sleeve",
+                "color": "White",
+                "size": "M",
+                "occasion": ["Formal", "Office", "Interview"],
+                "careInstructions": ["Machine Wash Cold", "Do Not Bleach", "Tumble Dry Low"]
+              }
+            }
+          },
+          {
+            "id": "RES-FASHION-BIBA-KURTI-BLUE-L",
+            "descriptor": {
+              "name": "BIBA Anarkali Kurta — Indigo Blue, Large",
+              "shortDesc": "Rayon printed anarkali kurta with three-quarter sleeves",
+              "longDesc": "BIBA's signature Anarkali kurta in rich indigo blue with a traditional block-print floral pattern. Made from soft rayon fabric with a round neck, three-quarter sleeves, and flared Anarkali silhouette. Side seam pockets. Pair with churidar or palazzo pants. Size large fits chest 40\", length 50\".",
+              "mediaFile": [
+                {
+                  "uri": "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/biba-indigo-anarkali-kurta.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FashionResource/v2.1/context.jsonld",
+              "@type": "FashionResource",
+              "identity": {
+                "brand": "BIBA",
+                "manufacturer": "Biba Apparels Pvt Ltd",
+                "originCountry": "IN"
+              },
+              "attributes": {
+                "fabric": "Rayon",
+                "fit": "Regular Fit",
+                "neckline": "Round Neck",
+                "sleeve": "Three-Quarter Sleeve",
+                "color": "Indigo Blue",
+                "print": "Floral Block Print",
+                "size": "L",
+                "occasion": ["Casual", "Festive", "Daily Wear"],
+                "careInstructions": ["Hand Wash", "Do Not Wring", "Dry in Shade"]
+              }
+            }
+          },
+          {
+            "id": "RES-FASHION-LEVI-501-JEANS-32W-30L",
+            "descriptor": {
+              "name": "Levi's 501 Original Fit Jeans — Dark Wash, 32W 30L",
+              "shortDesc": "Iconic button-fly straight-leg denim, 99% cotton",
+              "longDesc": "The Levi's 501 is the original blue jean — a timeless classic since 1873. Made from 99% cotton denim with a signature button fly, straight leg, and five-pocket styling. This dark wash version is pre-washed for softness. A versatile wardrobe staple that pairs with anything from t-shirts to blazers.",
+              "mediaFile": [
+                {
+                  "uri": "https://lsco.scene7.com/is/image/lsco/005010194-front-pdp.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FashionResource/v2.1/context.jsonld",
+              "@type": "FashionResource",
+              "identity": {
+                "brand": "Levi's",
+                "model": "501 Original",
+                "manufacturer": "Levi Strauss (India) Pvt Ltd",
+                "originCountry": "IN"
+              },
+              "attributes": {
+                "fabric": "99% Cotton 1% Elastane Denim",
+                "fit": "Straight Fit",
+                "rise": "Mid Rise",
+                "closure": "Button Fly",
+                "color": "Dark Wash",
+                "waist": "32",
+                "length": "30",
+                "occasion": ["Casual", "Smart Casual"],
+                "careInstructions": ["Machine Wash Cold", "Wash with Like Colors", "Line Dry"]
+              }
+            }
+          },
+          {
+            "id": "RES-FASHION-NIKE-AIR-MAX-270-WHITE-UK9",
+            "descriptor": {
+              "name": "Nike Air Max 270 — White/Black, UK Size 9",
+              "shortDesc": "Max Air unit heel, React foam midsole, mesh upper",
+              "longDesc": "The Nike Air Max 270 features Nike's tallest Air unit in the heel (270 degrees of visibility), delivering plush cushioning for all-day wear. The React foam midsole adds lightweight responsiveness while the engineered mesh upper offers breathability and a comfortable fit. Rubber traction outsole.",
+              "mediaFile": [
+                {
+                  "uri": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-max-270-shoes-white-black.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FashionResource/v2.1/context.jsonld",
+              "@type": "FashionResource",
+              "identity": {
+                "brand": "Nike",
+                "model": "Air Max 270",
+                "manufacturer": "Nike India Pvt Ltd",
+                "originCountry": "VN"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 340, "unitText": "G" }
+              },
+              "attributes": {
+                "type": "Lifestyle Sneaker",
+                "color": "White/Black",
+                "size": "UK 9",
+                "upper": "Engineered Mesh",
+                "midsole": "Nike React Foam + Max Air Unit",
+                "outsole": "Rubber",
+                "closure": "Lace-Up",
+                "gender": "Unisex",
+                "occasion": ["Casual", "Streetwear", "Light Sport"]
+              },
+              "warranty": { "duration": 6, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          },
+          {
+            "id": "RES-FASHION-FOSSIL-LEATHER-WALLET-TAN",
+            "descriptor": {
+              "name": "Fossil Quinn RFID Slim Bifold Wallet — Tan",
+              "shortDesc": "Full-grain leather, RFID blocking, 6-card slots",
+              "longDesc": "The Fossil Quinn slim bifold wallet is crafted from premium full-grain leather with a tan finish that develops character over time. Features RFID-blocking lining to protect your cards, 6 card slots, 2 full-length bill compartments, and a top-pocket for coins. Slim profile fits comfortably in front or back pocket.",
+              "mediaFile": [
+                {
+                  "uri": "https://fossil.com/dw/image/v2/BBXC_PRD/on/demandware.static/fossil-quinn-bifold-tan.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Product image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FashionResource/v2.1/context.jsonld",
+              "@type": "FashionResource",
+              "identity": {
+                "brand": "Fossil",
+                "model": "Quinn RFID Slim Bifold",
+                "manufacturer": "Fossil India Pvt Ltd",
+                "originCountry": "IN"
+              },
+              "physical": {
+                "weight": { "unitQuantity": 65, "unitText": "G" },
+                "dimensions": { "length": 110, "width": 90, "height": 10, "unit": "MM" }
+              },
+              "attributes": {
+                "material": "Full-Grain Leather",
+                "color": "Tan",
+                "style": "Bifold",
+                "cardSlots": 6,
+                "rfidBlocking": true,
+                "gender": "Men"
+              },
+              "warranty": { "duration": 12, "unit": "MONTHS", "type": "MANUFACTURER" }
+            }
+          }
+        ],
+        "offers": [
+          {
+            "id": "OFFER-ARROW-SHIRT-001",
+            "descriptor": { "name": "Arrow Formal Shirt White M — MRP" },
+            "resourceIds": ["RES-FASHION-ARROW-FORMAL-SHIRT-WHITE-M"],
+            "provider": { "id": "PROV-TRENDMART-ION-01", "descriptor": { "name": "TrendMart Forum Mall" } },
+            "validity": { "startDate": "2026-05-01T00:00:00Z", "endDate": "2026-07-31T23:59:59Z" },
+            "considerations": [
+              {
+                "id": "CONSID-ARROW-SHIRT-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Arrow Formal Shirt White M (MRP)", "amount": 1799, "type": "BASE_PRICE" }],
+                  "totalAmount": 1799
+                }
+              }
+            ]
+          },
+          {
+            "id": "OFFER-LEVIS-501-001",
+            "descriptor": { "name": "Levi's 501 Dark Wash 32x30 — MRP" },
+            "resourceIds": ["RES-FASHION-LEVI-501-JEANS-32W-30L"],
+            "provider": { "id": "PROV-TRENDMART-ION-01", "descriptor": { "name": "TrendMart Forum Mall" } },
+            "validity": { "startDate": "2026-05-01T00:00:00Z", "endDate": "2026-07-31T23:59:59Z" },
+            "considerations": [
+              {
+                "id": "CONSID-LEVIS-501-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Levi's 501 32x30 Dark Wash (MRP)", "amount": 5999, "type": "BASE_PRICE" }],
+                  "totalAmount": 5999
+                }
+              }
+            ]
+          },
+          {
+            "id": "OFFER-NIKE-AM270-001",
+            "descriptor": { "name": "Nike Air Max 270 White UK9 — MRP" },
+            "resourceIds": ["RES-FASHION-NIKE-AIR-MAX-270-WHITE-UK9"],
+            "provider": { "id": "PROV-TRENDMART-ION-01", "descriptor": { "name": "TrendMart Forum Mall" } },
+            "validity": { "startDate": "2026-05-01T00:00:00Z", "endDate": "2026-07-31T23:59:59Z" },
+            "considerations": [
+              {
+                "id": "CONSID-NIKE-AM270-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Nike Air Max 270 White UK9 (MRP)", "amount": 12995, "type": "BASE_PRICE" }],
+                  "totalAmount": 12995
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "publishDirectives": [
+      {
+        "catalogId": "CAT-FASHION-TRENDMART-ION-001",
+        "catalogType": "regular",
+        "updateMode": "MERGE"
+      }
+    ]
+  }
+}

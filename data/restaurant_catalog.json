@@ -1,0 +1,322 @@
+{
+  "context": {
+    "version": "2.0.0",
+    "action": "catalog/publish",
+    "timestamp": "2026-05-05T12:00:00Z",
+    "transactionId": "f7a8b9c0-d1e2-3456-abcd-456789012345",
+    "messageId": "a8b9c0d1-e2f3-4567-bcde-567890123456",
+    "bapId": "catalg.beckn.org",
+    "bapUri": "https://catalg.beckn.org/api",
+    "bppId": "bpp.spicegarden.in",
+    "bppUri": "https://bpp.spicegarden.in/callback",
+    "networkId": "beckn.one/ion-food"
+  },
+  "message": {
+    "catalogs": [
+      {
+        "id": "CAT-RESTAURANT-SPICEGARDEN-ION-001",
+        "descriptor": {
+          "name": "Spice Garden Restaurant Menu",
+          "shortDesc": "Authentic South Indian and North Indian cuisine"
+        },
+        "provider": {
+          "id": "PROV-SPICEGARDEN-ION-01",
+          "descriptor": {
+            "name": "Spice Garden Restaurants Pvt Ltd"
+          },
+          "availableAt": [
+            {
+              "geo": {
+                "type": "Point",
+                "coordinates": [77.6101, 12.9279]
+              },
+              "address": {
+                "streetAddress": "100 Feet Road, 5th Block, Indiranagar",
+                "addressLocality": "Bengaluru",
+                "addressRegion": "Karnataka",
+                "postalCode": "560038",
+                "addressCountry": "IN"
+              }
+            }
+          ]
+        },
+        "resources": [
+          {
+            "id": "RES-FOOD-MASALA-DOSA",
+            "descriptor": {
+              "name": "Masala Dosa",
+              "shortDesc": "Crispy rice crepe with spiced potato filling and chutneys",
+              "longDesc": "Our signature Masala Dosa — a large, golden-crisp dosa made from a fermented rice and urad dal batter, filled with a fragrant potato masala tempered with mustard seeds, curry leaves, onion and green chillies. Served with two chutneys (coconut and tomato) and a bowl of hot sambar.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.spicegarden.in/images/menu/masala-dosa.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Dish image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FoodResource/v2.1/context.jsonld",
+              "@type": "FoodResource",
+              "identity": {
+                "cuisine": "South Indian",
+                "category": "Breakfast / Main Course"
+              },
+              "food": {
+                "classification": "VEG",
+                "allergens": ["Gluten", "Urad Dal"],
+                "spiceLevel": "MEDIUM",
+                "servingSize": { "unitQuantity": 1, "unitText": "PLATE" },
+                "preparationTime": { "unitQuantity": 12, "unitText": "MINUTES" }
+              },
+              "nutrition": [
+                { "nutrient": "Energy", "value": { "unitQuantity": 210, "unitText": "KCAL" } },
+                { "nutrient": "Carbohydrates", "value": { "unitQuantity": 38, "unitText": "G" } },
+                { "nutrient": "Protein", "value": { "unitQuantity": 5, "unitText": "G" } },
+                { "nutrient": "Fat", "value": { "unitQuantity": 4, "unitText": "G" } }
+              ],
+              "customizations": [
+                { "name": "Extra Ghee", "type": "ADD_ON" },
+                { "name": "Onion Dosa", "type": "VARIANT" },
+                { "name": "Plain Dosa (no filling)", "type": "VARIANT" }
+              ]
+            }
+          },
+          {
+            "id": "RES-FOOD-CHICKEN-BIRYANI",
+            "descriptor": {
+              "name": "Hyderabadi Chicken Dum Biryani",
+              "shortDesc": "Slow-cooked dum biryani with tender chicken and saffron rice",
+              "longDesc": "Authentic Hyderabadi-style Dum Biryani prepared with marinated chicken pieces slow-cooked in a sealed handi with fragrant basmati rice, whole spices, caramelised onions, fresh mint, and a saffron-milk infusion. Served with raita, brinjal salan and a wedge of lime.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.spicegarden.in/images/menu/chicken-biryani.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Dish image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FoodResource/v2.1/context.jsonld",
+              "@type": "FoodResource",
+              "identity": {
+                "cuisine": "Hyderabadi",
+                "category": "Main Course"
+              },
+              "food": {
+                "classification": "NON-VEG",
+                "allergens": ["Dairy", "Tree Nuts"],
+                "spiceLevel": "HIGH",
+                "servingSize": { "unitQuantity": 1, "unitText": "PORTION" },
+                "preparationTime": { "unitQuantity": 20, "unitText": "MINUTES" }
+              },
+              "nutrition": [
+                { "nutrient": "Energy", "value": { "unitQuantity": 620, "unitText": "KCAL" } },
+                { "nutrient": "Carbohydrates", "value": { "unitQuantity": 72, "unitText": "G" } },
+                { "nutrient": "Protein", "value": { "unitQuantity": 38, "unitText": "G" } },
+                { "nutrient": "Fat", "value": { "unitQuantity": 18, "unitText": "G" } }
+              ],
+              "customizations": [
+                { "name": "Extra Chicken", "type": "ADD_ON" },
+                { "name": "Boneless", "type": "VARIANT" },
+                { "name": "Half Portion", "type": "VARIANT" }
+              ]
+            }
+          },
+          {
+            "id": "RES-FOOD-PANEER-BUTTER-MASALA",
+            "descriptor": {
+              "name": "Paneer Butter Masala",
+              "shortDesc": "Soft paneer cubes in rich tomato-cashew cream gravy",
+              "longDesc": "A North Indian classic — soft cottage cheese cubes simmered in a velvety gravy made from ripe tomatoes, cashew paste, fresh cream, butter and a blend of aromatic spices including kashmiri chilli, fenugreek and garam masala. Mildly spiced and rich. Best paired with naan or butter roti.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.spicegarden.in/images/menu/paneer-butter-masala.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Dish image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FoodResource/v2.1/context.jsonld",
+              "@type": "FoodResource",
+              "identity": {
+                "cuisine": "North Indian",
+                "category": "Main Course"
+              },
+              "food": {
+                "classification": "VEG",
+                "allergens": ["Dairy", "Tree Nuts (Cashew)"],
+                "spiceLevel": "MILD",
+                "servingSize": { "unitQuantity": 1, "unitText": "BOWL" },
+                "preparationTime": { "unitQuantity": 15, "unitText": "MINUTES" }
+              },
+              "nutrition": [
+                { "nutrient": "Energy", "value": { "unitQuantity": 380, "unitText": "KCAL" } },
+                { "nutrient": "Carbohydrates", "value": { "unitQuantity": 18, "unitText": "G" } },
+                { "nutrient": "Protein", "value": { "unitQuantity": 16, "unitText": "G" } },
+                { "nutrient": "Fat", "value": { "unitQuantity": 28, "unitText": "G" } }
+              ],
+              "customizations": [
+                { "name": "Extra Paneer", "type": "ADD_ON" },
+                { "name": "Less Spicy", "type": "PREFERENCE" },
+                { "name": "No Cream", "type": "PREFERENCE" }
+              ]
+            }
+          },
+          {
+            "id": "RES-FOOD-MANGO-LASSI",
+            "descriptor": {
+              "name": "Fresh Mango Lassi",
+              "shortDesc": "Chilled yogurt drink with Alphonso mango pulp",
+              "longDesc": "Made fresh to order with chilled whole-milk curd, real Alphonso mango pulp, a pinch of cardamom and a drizzle of honey. No artificial flavours or colours. Thick and creamy. Served in a chilled glass with a slice of fresh mango on the rim. A perfect cooling accompaniment to spicy dishes.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.spicegarden.in/images/menu/mango-lassi.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Dish image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FoodResource/v2.1/context.jsonld",
+              "@type": "FoodResource",
+              "identity": {
+                "cuisine": "Indian",
+                "category": "Beverage"
+              },
+              "food": {
+                "classification": "VEG",
+                "allergens": ["Dairy"],
+                "spiceLevel": "NONE",
+                "servingSize": { "unitQuantity": 300, "unitText": "ML" },
+                "preparationTime": { "unitQuantity": 5, "unitText": "MINUTES" }
+              },
+              "nutrition": [
+                { "nutrient": "Energy", "value": { "unitQuantity": 220, "unitText": "KCAL" } },
+                { "nutrient": "Carbohydrates", "value": { "unitQuantity": 34, "unitText": "G" } },
+                { "nutrient": "Protein", "value": { "unitQuantity": 6, "unitText": "G" } },
+                { "nutrient": "Fat", "value": { "unitQuantity": 7, "unitText": "G" } }
+              ],
+              "customizations": [
+                { "name": "No Sugar", "type": "PREFERENCE" },
+                { "name": "Extra Thick", "type": "PREFERENCE" },
+                { "name": "Strawberry (seasonal)", "type": "VARIANT" }
+              ]
+            }
+          },
+          {
+            "id": "RES-FOOD-GULAB-JAMUN",
+            "descriptor": {
+              "name": "Gulab Jamun (2 pieces)",
+              "shortDesc": "Soft khoya dumplings in rose-cardamom sugar syrup",
+              "longDesc": "Classic Gulab Jamun — soft, melt-in-the-mouth dumplings made from khoya (reduced milk solids) and maida, deep-fried to a golden-brown and soaked in a warm rose water and cardamom-scented sugar syrup. Served warm in a bowl, garnished with pistachios. Two pieces per serving.",
+              "mediaFile": [
+                {
+                  "uri": "https://www.spicegarden.in/images/menu/gulab-jamun.jpg",
+                  "mimeType": "image/jpeg",
+                  "label": "Dish image"
+                }
+              ]
+            },
+            "resourceAttributes": {
+              "@context": "https://schema.beckn.io/FoodResource/v2.1/context.jsonld",
+              "@type": "FoodResource",
+              "identity": {
+                "cuisine": "Indian",
+                "category": "Dessert"
+              },
+              "food": {
+                "classification": "VEG",
+                "allergens": ["Dairy", "Gluten", "Tree Nuts (Pistachio)"],
+                "spiceLevel": "NONE",
+                "servingSize": { "unitQuantity": 2, "unitText": "PIECES" },
+                "preparationTime": { "unitQuantity": 5, "unitText": "MINUTES" }
+              },
+              "nutrition": [
+                { "nutrient": "Energy", "value": { "unitQuantity": 290, "unitText": "KCAL" } },
+                { "nutrient": "Carbohydrates", "value": { "unitQuantity": 44, "unitText": "G" } },
+                { "nutrient": "Protein", "value": { "unitQuantity": 5, "unitText": "G" } },
+                { "nutrient": "Fat", "value": { "unitQuantity": 10, "unitText": "G" } }
+              ],
+              "customizations": [
+                { "name": "With Ice Cream", "type": "ADD_ON" },
+                { "name": "Sugar-Free Syrup", "type": "PREFERENCE" },
+                { "name": "Warm / Room Temperature", "type": "PREFERENCE" }
+              ]
+            }
+          }
+        ],
+        "offers": [
+          {
+            "id": "OFFER-MASALA-DOSA-001",
+            "descriptor": { "name": "Masala Dosa — Dine-in Price" },
+            "resourceIds": ["RES-FOOD-MASALA-DOSA"],
+            "provider": { "id": "PROV-SPICEGARDEN-ION-01", "descriptor": { "name": "Spice Garden Indiranagar" } },
+            "validity": { "startDate": "2026-05-01T07:00:00Z", "endDate": "2026-12-31T22:00:00Z" },
+            "considerations": [
+              {
+                "id": "CONSID-MASALA-DOSA-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Masala Dosa", "amount": 130, "type": "BASE_PRICE" }],
+                  "totalAmount": 130
+                }
+              }
+            ]
+          },
+          {
+            "id": "OFFER-CHICKEN-BIRYANI-001",
+            "descriptor": { "name": "Hyderabadi Chicken Dum Biryani — Dine-in Price" },
+            "resourceIds": ["RES-FOOD-CHICKEN-BIRYANI"],
+            "provider": { "id": "PROV-SPICEGARDEN-ION-01", "descriptor": { "name": "Spice Garden Indiranagar" } },
+            "validity": { "startDate": "2026-05-01T11:00:00Z", "endDate": "2026-12-31T22:00:00Z" },
+            "considerations": [
+              {
+                "id": "CONSID-CHICKEN-BIRYANI-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Hyderabadi Chicken Dum Biryani", "amount": 380, "type": "BASE_PRICE" }],
+                  "totalAmount": 380
+                }
+              }
+            ]
+          },
+          {
+            "id": "OFFER-PANEER-BUTTER-MASALA-001",
+            "descriptor": { "name": "Paneer Butter Masala — Dine-in Price" },
+            "resourceIds": ["RES-FOOD-PANEER-BUTTER-MASALA"],
+            "provider": { "id": "PROV-SPICEGARDEN-ION-01", "descriptor": { "name": "Spice Garden Indiranagar" } },
+            "validity": { "startDate": "2026-05-01T11:00:00Z", "endDate": "2026-12-31T22:00:00Z" },
+            "considerations": [
+              {
+                "id": "CONSID-PANEER-BUTTER-MASALA-001",
+                "status": { "name": "ACTIVE" },
+                "considerationAttributes": {
+                  "@context": "https://schema.beckn.io/RetailConsideration/v2.1/context.jsonld",
+                  "@type": "RetailConsideration",
+                  "currency": "INR",
+                  "breakup": [{ "title": "Paneer Butter Masala", "amount": 320, "type": "BASE_PRICE" }],
+                  "totalAmount": 320
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "publishDirectives": [
+      {
+        "catalogId": "CAT-RESTAURANT-SPICEGARDEN-ION-001",
+        "catalogType": "regular",
+        "updateMode": "MERGE"
+      }
+    ]
+  }
+}
