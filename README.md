@@ -5,7 +5,7 @@ A proof-of-concept for storing Beckn v2.0 catalog data as versioned git reposito
 ## What this POC demonstrates
 
 - **Horizontal git storage** — catalog JSON is stored as bare git repos on independent Gitea nodes; each node owns a deterministic shard of the catalog ID space
-- **Praefect-inspired coordinator** — PostgreSQL is the authoritative routing table (catalog ID → node URL); Redis is a read-through cache in front of it; the consistent hash ring is used only for first-time placement of new catalog IDs
+- **Praefect-inspired coordinator** — PostgreSQL is the authoritative routing table (catalog ID → node URL); Redis is a read-through cache in front of it; the consistent hash ring is used only for first-time placement of new catalog IDs; each physical node gets 150 virtual positions on the ring so that load is statistically balanced (~50% per node for a 2-node cluster) regardless of where the node URLs happen to hash — with only 1 position per physical node the split could be arbitrarily skewed
 - **Zero-movement node addition** — adding a 4th Gitea node updates `GITEA_NODES` and restarts the API; existing catalog IDs keep their Postgres-recorded node; only new IDs begin routing to the expanded ring; no data migration required
 - **Full version history** — every publish creates a new git commit; MERGE and FULL update modes both produce an auditable commit log
 
